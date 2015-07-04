@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+	<loc>http://brick.io/math/index.html</loc>
+</url>
+<url>
+	<loc>http://brick.io/math/namespace-Brick.html</loc>
+</url>
+<url>
+	<loc>http://brick.io/math/namespace-Brick.Math.html</loc>
+</url>
+<url>
+	<loc>http://brick.io/math/namespace-Brick.Math.Exception.html</loc>
+</url>
+
+
+<url>
+	<loc>http://brick.io/math/class-Brick.Math.BigDecimal.html</loc>
+</url>
+<url>
+	<loc>http://brick.io/math/class-Brick.Math.BigInteger.html</loc>
+</url>
+<url>
+	<loc>http://brick.io/math/class-Brick.Math.BigNumber.html</loc>
+</url>
+<url>
+	<loc>http://brick.io/math/class-Brick.Math.BigRational.html</loc>
+</url>
+<url>
+	<loc>http://brick.io/math/class-Brick.Math.RoundingMode.html</loc>
+</url>
+<url>
+	<loc>http://brick.io/math/class-Brick.Math.Exception.ArithmeticException.html</loc>
+</url>
+<url>
+	<loc>http://brick.io/math/class-Brick.Math.Exception.DivisionByZeroException.html</loc>
+</url>
+<url>
+	<loc>http://brick.io/math/class-Brick.Math.Exception.NumberFormatException.html</loc>
+</url>
+<url>
+	<loc>http://brick.io/math/class-Brick.Math.Exception.RoundingNecessaryException.html</loc>
+</url>
+</urlset>

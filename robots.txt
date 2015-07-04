@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: http://brick.io/math/sitemap.xml
