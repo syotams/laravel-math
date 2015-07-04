@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Brick\Math\BigNumber | Brick\Math</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
+	<link rel="stylesheet" href="resources/style.css?49f43d3208c5d7e33fa16d36107a345bf11cc00d">
+
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">Brick\Math</a>
+			</div>
+			<div class="collapse navbar-collapse">
+
+                <form id="search" class="navbar-form navbar-left" role="search">
+                    <input type="hidden" name="cx" value="">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <div class="form-group">
+                        <input type="text" name="q" class="search-query form-control" placeholder="Search">
+					</div>
+				</form>
+
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="namespace-Brick.Math.html" title="Summary of Brick\Math"><span>Namespace</span></a>
+					</li>
+					<li class="active">
+<span>Class</span>					</li>
+
+
+
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li class="active">
+						<a href="namespace-Brick.html">
+							Brick<span></span>
+						</a>
+							<ul>
+					<li class="active">
+						<a href="namespace-Brick.Math.html">
+							Math<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-Brick.Math.Exception.html">
+							Exception						</a>
+							</li>
+								</ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Brick.Math.BigDecimal.html">BigDecimal</a></li>
+				<li><a href="class-Brick.Math.BigInteger.html">BigInteger</a></li>
+				<li class="active"><a href="class-Brick.Math.BigNumber.html">BigNumber</a></li>
+				<li><a href="class-Brick.Math.BigRational.html">BigRational</a></li>
+				<li><a href="class-Brick.Math.RoundingMode.html">RoundingMode</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class BigNumber</h1>
+
+
+	<div class="description">
+	<p>Common interface for arbitrary-precision rational numbers.</p>
+	</div>
+
+
+
+	<div>
+		<h3>Direct known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-Brick.Math.BigDecimal.html">Brick\Math\BigDecimal</a></code>, 
+			<code><a href="class-Brick.Math.BigInteger.html">Brick\Math\BigInteger</a></code>, 
+			<code><a href="class-Brick.Math.BigRational.html">Brick\Math\BigRational</a></code>
+		</p>
+	</div>
+
+
+
+
+
+
+	<div class="alert alert-info">
+		<b>Abstract</b><br>
+		
+		<b>Namespace:</b> <a href="namespace-Brick.html">Brick</a>\<a href="namespace-Brick.Math.html">Math</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-Brick.Math.BigNumber.html#10-388" title="Go to source code">BigNumber.php</a>
+		<br>
+	</div>
+
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Methods summary</h2></div>
+			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="of" id="_of">
+
+			<td class="attributes"><code>
+				 public static
+				<code><a href="class-Brick.Math.BigNumber.html">Brick\Math\BigNumber</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_of">#</a>
+			<code><a href="source-class-Brick.Math.BigNumber.html#33-100" title="Go to source code">of</a>( <span><code><a href="class-Brick.Math.BigNumber.html">Brick\Math\BigNumber</a></code>|number|string <var>$value</var></span> )</code>
+
+			<div class="description short">
+				<p>Creates a BigNumber of the given value.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Creates a BigNumber of the given value.</p>
+
+<p>The concrete return type is dependent on the given value, with the following rules:</p>
+
+<ul>
+<li>BigNumber instances are returned as is</li>
+<li>integer numbers are returned as BigInteger</li>
+<li>floating point numbers are returned as BigDecimal</li>
+<li>strings containing a <code>/</code> character are returned as BigRational</li>
+<li>strings containing a <code>.</code> character or using an exponentional notation are returned as BigDecimal</li>
+<li>strings containing only digits with an optional leading <code>+</code> or <code>-</code> sign are returned as BigInteger</li>
+</ul>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$value</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Brick.Math.BigNumber.html">Brick\Math\BigNumber</a></code>
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Brick.Math.Exception.NumberFormatException.html">Brick\Math\Exception\NumberFormatException</a></code><br>If the format of the number is not valid.<br>
+						<code><a href="class-Brick.Math.Exception.DivisionByZeroException.html">Brick\Math\Exception\DivisionByZeroException</a></code><br>If the value represents a rational number with a denominator of zero.
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="min" id="_min">
+
+			<td class="attributes"><code>
+				 public static
+				static
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_min">#</a>
+			<code><a href="source-class-Brick.Math.BigNumber.html#116-144" title="Go to source code">min</a>( <span><code><a href="class-Brick.Math.BigNumber.html">Brick\Math\BigNumber</a></code>|number|string <var>$values</var></span> )</code>
+
+			<div class="description short">
+				<p>Returns the minimum of the given values.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the minimum of the given values.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$values</var></dt>
+						<dd><p>$values The numbers to compare. All the numbers need to be convertible
+                                          to an instance of the class this method is called on.</p></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						static<br>The minimum value.
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						InvalidArgumentException<br>If no values are given.<br>
+						<code><a href="class-Brick.Math.Exception.ArithmeticException.html">Brick\Math\Exception\ArithmeticException</a></code><br>If an argument is not valid.
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="max" id="_max">
+
+			<td class="attributes"><code>
+				 public static
+				static
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_max">#</a>
+			<code><a href="source-class-Brick.Math.BigNumber.html#146-174" title="Go to source code">max</a>( <span><code><a href="class-Brick.Math.BigNumber.html">Brick\Math\BigNumber</a></code>|number|string <var>$values</var></span> )</code>
+
+			<div class="description short">
+				<p>Returns the maximum of the given values.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the maximum of the given values.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$values</var></dt>
+						<dd><p>$values The numbers to compare. All the numbers need to be convertible
+                                          to an instance of the class this method is called on.</p></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						static<br>The maximum value.
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						InvalidArgumentException<br>If no values are given.<br>
+						<code><a href="class-Brick.Math.Exception.ArithmeticException.html">Brick\Math\Exception\ArithmeticException</a></code><br>If an argument is not valid.
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isEqualTo" id="_isEqualTo">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isEqualTo">#</a>
+			<code><a href="source-class-Brick.Math.BigNumber.html#204-214" title="Go to source code">isEqualTo</a>( <span><code><a href="class-Brick.Math.BigNumber.html">Brick\Math\BigNumber</a></code>|number|string <var>$that</var></span> )</code>
+
+			<div class="description short">
+				<p>Checks if this number is equal to the given one.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if this number is equal to the given one.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$that</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isLessThan" id="_isLessThan">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isLessThan">#</a>
+			<code><a href="source-class-Brick.Math.BigNumber.html#216-226" title="Go to source code">isLessThan</a>( <span><code><a href="class-Brick.Math.BigNumber.html">Brick\Math\BigNumber</a></code>|number|string <var>$that</var></span> )</code>
+
+			<div class="description short">
+				<p>Checks if this number is strictly lower than the given one.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if this number is strictly lower than the given one.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$that</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isLessThanOrEqualTo" id="_isLessThanOrEqualTo">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isLessThanOrEqualTo">#</a>
+			<code><a href="source-class-Brick.Math.BigNumber.html#228-238" title="Go to source code">isLessThanOrEqualTo</a>( <span><code><a href="class-Brick.Math.BigNumber.html">Brick\Math\BigNumber</a></code>|number|string <var>$that</var></span> )</code>
+
+			<div class="description short">
+				<p>Checks if this number is lower than or equal to the given one.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if this number is lower than or equal to the given one.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$that</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isGreaterThan" id="_isGreaterThan">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isGreaterThan">#</a>
+			<code><a href="source-class-Brick.Math.BigNumber.html#240-250" title="Go to source code">isGreaterThan</a>( <span><code><a href="class-Brick.Math.BigNumber.html">Brick\Math\BigNumber</a></code>|number|string <var>$that</var></span> )</code>
+
+			<div class="description short">
+				<p>Checks if this number is strictly greater than the given one.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if this number is strictly greater than the given one.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$that</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isGreaterThanOrEqualTo" id="_isGreaterThanOrEqualTo">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isGreaterThanOrEqualTo">#</a>
+			<code><a href="source-class-Brick.Math.BigNumber.html#252-262" title="Go to source code">isGreaterThanOrEqualTo</a>( <span><code><a href="class-Brick.Math.BigNumber.html">Brick\Math\BigNumber</a></code>|number|string <var>$that</var></span> )</code>
+
+			<div class="description short">
+				<p>Checks if this number is greater than or equal to the given one.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if this number is greater than or equal to the given one.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$that</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isZero" id="_isZero">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isZero">#</a>
+			<code><a href="source-class-Brick.Math.BigNumber.html#264-272" title="Go to source code">isZero</a>( )</code>
+
+			<div class="description short">
+				<p>Checks if this number equals zero.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if this number equals zero.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isNegative" id="_isNegative">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isNegative">#</a>
+			<code><a href="source-class-Brick.Math.BigNumber.html#274-282" title="Go to source code">isNegative</a>( )</code>
+
+			<div class="description short">
+				<p>Checks if this number is strictly negative.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if this number is strictly negative.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isNegativeOrZero" id="_isNegativeOrZero">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isNegativeOrZero">#</a>
+			<code><a href="source-class-Brick.Math.BigNumber.html#284-292" title="Go to source code">isNegativeOrZero</a>( )</code>
+
+			<div class="description short">
+				<p>Checks if this number is negative or zero.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if this number is negative or zero.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isPositive" id="_isPositive">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isPositive">#</a>
+			<code><a href="source-class-Brick.Math.BigNumber.html#294-302" title="Go to source code">isPositive</a>( )</code>
+
+			<div class="description short">
+				<p>Checks if this number is strictly positive.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if this number is strictly positive.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isPositiveOrZero" id="_isPositiveOrZero">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isPositiveOrZero">#</a>
+			<code><a href="source-class-Brick.Math.BigNumber.html#304-312" title="Go to source code">isPositiveOrZero</a>( )</code>
+
+			<div class="description short">
+				<p>Checks if this number is positive or zero.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if this number is positive or zero.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="sign" id="_sign">
+
+			<td class="attributes"><code>
+				abstract public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_sign">#</a>
+			<code><a href="source-class-Brick.Math.BigNumber.html#314-319" title="Go to source code">sign</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the sign of this number.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the sign of this number.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer<br>-1 if the number is negative, 0 if zero, 1 if positive.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="compareTo" id="_compareTo">
+
+			<td class="attributes"><code>
+				abstract public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_compareTo">#</a>
+			<code><a href="source-class-Brick.Math.BigNumber.html#321-330" title="Go to source code">compareTo</a>( <span><code><a href="class-Brick.Math.BigNumber.html">Brick\Math\BigNumber</a></code>|number|string <var>$that</var></span> )</code>
+
+			<div class="description short">
+				<p>Compares this number to the given one.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Compares this number to the given one.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$that</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer<br>[-1,0,1] If <code>$this</code> is lower than, equal to, or greater than <code>$that</code>.
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Brick.Math.Exception.ArithmeticException.html">Brick\Math\Exception\ArithmeticException</a></code><br>If the number is not valid.
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toBigInteger" id="_toBigInteger">
+
+			<td class="attributes"><code>
+				abstract public 
+				<code><a href="class-Brick.Math.BigInteger.html">Brick\Math\BigInteger</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toBigInteger">#</a>
+			<code><a href="source-class-Brick.Math.BigNumber.html#332-339" title="Go to source code">toBigInteger</a>( )</code>
+
+			<div class="description short">
+				<p>Converts this number to a BigInteger.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Converts this number to a BigInteger.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Brick.Math.BigInteger.html">Brick\Math\BigInteger</a></code><br>The converted number.
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Brick.Math.Exception.RoundingNecessaryException.html">Brick\Math\Exception\RoundingNecessaryException</a></code><br>If this number cannot be converted to a BigInteger without rounding.
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toBigDecimal" id="_toBigDecimal">
+
+			<td class="attributes"><code>
+				abstract public 
+				<code><a href="class-Brick.Math.BigDecimal.html">Brick\Math\BigDecimal</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toBigDecimal">#</a>
+			<code><a href="source-class-Brick.Math.BigNumber.html#341-348" title="Go to source code">toBigDecimal</a>( )</code>
+
+			<div class="description short">
+				<p>Converts this number to a BigDecimal.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Converts this number to a BigDecimal.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Brick.Math.BigDecimal.html">Brick\Math\BigDecimal</a></code><br>The converted number.
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Brick.Math.Exception.RoundingNecessaryException.html">Brick\Math\Exception\RoundingNecessaryException</a></code><br>If this number cannot be converted to a BigDecimal without rounding.
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toBigRational" id="_toBigRational">
+
+			<td class="attributes"><code>
+				abstract public 
+				<code><a href="class-Brick.Math.BigRational.html">Brick\Math\BigRational</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toBigRational">#</a>
+			<code><a href="source-class-Brick.Math.BigNumber.html#350-355" title="Go to source code">toBigRational</a>( )</code>
+
+			<div class="description short">
+				<p>Converts this number to a BigRational.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Converts this number to a BigRational.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Brick.Math.BigRational.html">Brick\Math\BigRational</a></code><br>The converted number.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toInteger" id="_toInteger">
+
+			<td class="attributes"><code>
+				abstract public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toInteger">#</a>
+			<code><a href="source-class-Brick.Math.BigNumber.html#357-367" title="Go to source code">toInteger</a>( )</code>
+
+			<div class="description short">
+				<p>Returns the exact value of this number as a native integer.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns the exact value of this number as a native integer.</p>
+
+<p>If this number cannot be converted to a native integer without losing precision, an exception is thrown.
+Note that the acceptable range for an integer depends on the platform and differs for 32-bit and 64-bit.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer<br>The converted value.
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Brick.Math.Exception.ArithmeticException.html">Brick\Math\Exception\ArithmeticException</a></code><br>If this number cannot be exactly converted to a native integer.
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toFloat" id="_toFloat">
+
+			<td class="attributes"><code>
+				abstract public 
+				float
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toFloat">#</a>
+			<code><a href="source-class-Brick.Math.BigNumber.html#369-377" title="Go to source code">toFloat</a>( )</code>
+
+			<div class="description short">
+				<p>Returns an approximation of this number as a floating-point value.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns an approximation of this number as a floating-point value.</p>
+
+<p>Note that this method can discard information as the precision of a floating-point value
+is inherently limited.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						float<br>The converted value.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__toString" id="___toString">
+
+			<td class="attributes"><code>
+				abstract public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___toString">#</a>
+			<code><a href="source-class-Brick.Math.BigNumber.html#379-387" title="Go to source code">__toString</a>( )</code>
+
+			<div class="description short">
+				<p>Returns a string representation of this number.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns a string representation of this number.</p>
+
+<p>The output of this method can be parsed by the <code>of()</code> factory method;
+this will yield an object equal to this one, without any information loss.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Brick\Math API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
