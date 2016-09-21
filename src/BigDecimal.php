@@ -9,7 +9,7 @@ use Brick\Math\Internal\Calculator;
 /**
  * Immutable, arbitrary-precision signed decimal numbers.
  */
-final class BigDecimal extends BigNumber implements \Serializable, JsonSerializable
+final class BigDecimal extends BigNumber implements \Serializable, \JsonSerializable
 {
     /**
      * The unscaled value of this decimal number.
