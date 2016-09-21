@@ -1,5 +1,5 @@
 {
-    "name": "syotams/laravel-math",
+    "name": "syotams/math",
     "description": "Arbitrary-precision arithmetic library",
     "type": "library",
     "keywords": [
