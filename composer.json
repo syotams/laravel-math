@@ -1,5 +1,5 @@
 {
-    "name": "brick/math",
+    "name": "syotams/laravel-math",
     "description": "Arbitrary-precision arithmetic library",
     "type": "library",
     "keywords": [

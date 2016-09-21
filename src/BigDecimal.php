@@ -9,7 +9,7 @@ use Brick\Math\Internal\Calculator;
 /**
  * Immutable, arbitrary-precision signed decimal numbers.
  */
-final class BigDecimal extends BigNumber implements \Serializable
+final class BigDecimal extends BigNumber implements \Serializable, JsonSerializable
 {
     /**
      * The unscaled value of this decimal number.
@@ -686,6 +686,11 @@ final class BigDecimal extends BigNumber implements \Serializable
      */
     public function __toString()
     {
+        return $this->toString();
+    }
+
+    public function toString()
+    {
         if ($this->scale === 0) {
             return $this->value;
         }
@@ -797,5 +802,9 @@ final class BigDecimal extends BigNumber implements \Serializable
         }
 
         return $value;
+    }
+
+    public function jsonSerialize() {
+        return $this->toString();
     }
 }

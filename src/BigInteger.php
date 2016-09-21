@@ -13,7 +13,7 @@ use Brick\Math\Internal\Calculator;
  * All methods accepting a number as a parameter accept either a BigInteger instance,
  * an integer, or a string representing an arbitrary size integer.
  */
-final class BigInteger extends BigNumber implements \Serializable
+final class BigInteger extends BigNumber implements \Serializable, \JsonSerializable
 {
     /**
      * The value, as a string of digits with optional leading minus sign.
@@ -553,6 +553,10 @@ final class BigInteger extends BigNumber implements \Serializable
      */
     public function __toString()
     {
+        return $this->toString();
+    }
+
+    public function toString() {
         return $this->value;
     }
 
@@ -586,5 +590,9 @@ final class BigInteger extends BigNumber implements \Serializable
         }
 
         $this->value = $value;
+    }
+
+    public function jsonSerialize() {
+        return $this->toString();
     }
 }

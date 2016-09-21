@@ -12,7 +12,7 @@ use Brick\Math\Exception\RoundingNecessaryException;
  *
  * This class is immutable.
  */
-final class BigRational extends BigNumber implements \Serializable
+final class BigRational extends BigNumber implements \Serializable, \JsonSerializable
 {
     /**
      * The numerator.
@@ -417,6 +417,11 @@ final class BigRational extends BigNumber implements \Serializable
      */
     public function __toString()
     {
+        return $this->toString();
+    }
+
+    public function toString()
+    {
         $numerator   = (string) $this->numerator;
         $denominator = (string) $this->denominator;
 
@@ -458,5 +463,17 @@ final class BigRational extends BigNumber implements \Serializable
 
         $this->numerator   = BigInteger::of($numerator);
         $this->denominator = BigInteger::of($denominator);
+    }
+
+    /**
+     * Specify data which should be serialized to JSON
+     * @link http://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     * @since 5.4.0
+     */
+    function jsonSerialize()
+    {
+        return $this->toString();
     }
 }
